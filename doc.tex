@@ -1,0 +1,40 @@
+% -*- coding:utf-8 -*-
+\input{header.tex}
+
+\newcommand{\uuid}{}
+\newcommand{\localtag}{}
+\newcommand{\globaltag}{}
+\newcommand{\tags}[1]{
+    \ifnote 
+        \renewcommand{\localtag}{#1}
+    \else
+        \renewcommand{\globaltag}{#1}
+    \fi 
+    }
+    \newif\ifnote
+\newenvironment{note}
+{\par\medskip\noindent\hspace*{0.3in}
+  \tabular{!{\color{blue!40}%
+      \vrule width 5pt}p{\dimexpr\linewidth-0.6in-2\tabcolsep-5pt\relax}|}\hline}
+{\\\hline\endtabular\par\medskip}
+\newenvironment{field}{\paragraph{field:}}{}
+\newcommand{\xplain}[1]{\renewcommand{\uuid}{#1}}
+\begin{document}
+
+\title{Linear Logic Anki Study Document}
+\author{Denis Erfurt, Jack Pettersson}
+\maketitle
+
+\tags{llogic}
+
+\begin{note}
+  \xplain{a68e5194-e1f9-47c5-bb69-22f4b2d13560}
+  \begin{field}
+    Question
+  \end{field}
+  \begin{field}
+    Answer
+  \end{field}
+\end{note}
+
+\end{document}
