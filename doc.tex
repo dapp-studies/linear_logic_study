@@ -17,7 +17,7 @@
   \tabular{!{\color{blue!40}%
       \vrule width 5pt}p{\dimexpr\linewidth-0.6in-2\tabcolsep-5pt\relax}|}\hline}
 {\\\hline\endtabular\par\medskip}
-\newenvironment{field}{\paragraph{field:}}{}
+\newenvironment{field}{\center}{\center}
 \newcommand{\xplain}[1]{\renewcommand{\uuid}{#1}}
 \begin{document}
 
@@ -30,11 +30,347 @@
 \begin{note}
   \xplain{a68e5194-e1f9-47c5-bb69-22f4b2d13560}
   \begin{field}
-    Question
-  \end{field}
+    Def. $\otimes L$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
   \begin{field}
-    Answer
+  \[ \prftree[r]
+    {$\otimes L$}
+    {\Delta, A,B\vdash C}
+    {\Delta,A\otimes B\vdash C}
+  \]
   \end{field}
 \end{note}
+
+\begin{note}
+  \xplain{7a405bc2-a8cc-4d34-8005-eed1a19e7eab}
+  \begin{field}
+    Def. $\otimes R$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$\otimes R$}
+      {\Delta\vdash A}
+      {\Delta'\vdash B}
+      {\Delta, \Delta'\vdash A\otimes B}
+    \] 
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{6b43b088-c7d9-4ab7-a5ae-d1c6bce19364}
+  \begin{field}
+    Def. $id_A$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[
+      \prftree[r]
+      {$id_A$}
+      {A\vdash A}
+    \]
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{ca0405fe-6540-46d7-ba40-eba6f4670820}
+  \begin{field}
+    Def. $cut_A$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$cut_A$}
+      {\Delta\vdash A}
+      {\Delta',A\vdash C}
+      {\Delta,\Delta'\vdash C}
+    \] 
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{6d85f4df-84f5-443d-b29f-dd84c4c5e97c}
+  \begin{field}
+    Def. $\multimap L$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[
+      \prftree[r]
+      {$\multimap L$}
+      {\Delta\vdash A}
+      {\Delta', B\vdash C}
+      {\Delta, \Delta'\multimap B\vdash C}
+    \]
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{c8c3c986-bec3-41de-8ea3-44146fd8e838}
+  \begin{field}
+    Def. $\multimap R$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$\multimap R$}
+      {\Delta, A\vdash B}
+      {\Delta\vdash A\multimap B}
+    \] 
+  \end{field}
+\end{note}
+
+\tags{llogic harmony}
+
+\begin{note}
+  \xplain{3df8cd2e-a6c0-4831-a5ca-92fe6ea3e458}
+  \begin{field}
+    What is Harmony?
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    Successful cut reduction and identity expansion on a connective.
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{6074d2c5-6698-49c6-a9c6-ba986cc56274}
+  \begin{field}
+    Def. $1 R$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$1 R$}
+      {\cdot\vdash 1}
+    \] 
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{ce73275e-0059-4abf-b499-5a083db18026}
+  \begin{field}
+    Def. $1 L$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[
+      \prftree[r]
+      {$1 L$}
+      {\Delta\vdash C}
+      {\Delta,1\vdash C}
+    \]
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{e6419280-9321-4b80-9e27-562101116be1}
+  \begin{field}
+    Def. $\&R$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[
+      \prftree[r]
+      {$\&R$}
+      {\Delta\vdash A}
+      {\Delta\vdash B}
+      {\Delta\vdash A\& B}
+    \]
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{1806f8ba-7e91-4512-b882-f658298ccc15}
+  \begin{field}
+    Def. $\& L$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[
+      \prftree[r]
+      {$\&L_1$}
+      {\Delta, A\vdash C}
+      {\Delta, A\&B\vdash C}
+    \]
+    \[
+      \prftree[r]
+      {$\&L_2$}
+      {\Delta, B\vdash C}
+      {\Delta, A\&B\vdash C}
+    \]
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{59f0f38e-0691-4b0f-8262-2ccd0f6d6421}
+  \begin{field}
+    Names for $A\& B$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \begin{enumerate}
+      \item A with B
+      \item alternative conjunction
+      \item additive conjunction
+    \end{enumerate}
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{a8d5a3db-45a2-4c04-a1d6-9ffa4fde9df8}
+  \begin{field}
+    Def. $\top R$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[
+      \prftree[r]
+      {$\top R$}
+      {\Delta\vdash\top}
+    \]
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{9ba9aa80-34e0-478d-ab42-864d921a05b5}
+  \begin{field}
+    Def. $\oplus R_1$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$\oplus R_1$}
+      {\Delta\vdash A}
+      {\Delta\vdash A\oplus B}
+    \] 
+
+    \[ 
+      \prftree[r]
+      {$\oplus R_2$}
+      {\Delta\vdash B}
+      {\Delta\vdash A\oplus B}
+    \] 
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \xplain{d721c93d-13ad-49ac-a72e-2ef77a2db3f6}
+  \begin{field}
+    Def. $\oplus L$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$\oplus L$}
+      {\Delta, A\vdash C}
+      {\Delta, B\vdash C}
+      {\Delta, A\otimes B\vdash C}
+    \] 
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \xplain{1f17e956-ee9e-465b-86f0-fc21ebe660c0}
+  \begin{field}
+    Def. $0 L$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[
+      \prftree[r]
+      {$0L$}
+      {\Delta, 0\vdash C}
+    \]
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{48a43fe1-4a9e-426c-a97f-7fa3f7e3303f}
+  \begin{field}
+    Def. copy
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {copy}
+      {\Gamma,A\text{ pers};\Delta,A\text{ eph}\vdash C\text{ eph}}
+      {\Gamma,A\text{ pers};\Delta\vdash C\text{ eph}}
+    \] 
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \xplain{6f6aa0a4-2d99-47f5-a5a0-db40fcc11535}
+  \begin{field}
+    Def. $cut'_A$ (pers.)
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$cut'_A$}
+      {\Gamma;\cdot\vdash A\text{ eph}}
+      {\Gamma,A\text{ pers};\Delta\vdash C\text{ eph}}
+      {\Gamma;\Delta\vdash C\text{ eph}}
+    \] 
+  \end{field}
+\end{note}
+
+
+\begin{note}
+  \xplain{cfae271a-8dc3-4c69-aae5-01a7493d1db3}
+  \begin{field}
+    Def. $!L$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {$!L$}
+      {\Gamma, A\text{ pers}; \Delta\vdash C\text{ eph} }
+      {\Gamma; \Delta, !A\text{ eph}\vdash C\text{ eph}}
+    \] 
+  \end{field}
+\end{note}
+
+\begin{note}
+  \xplain{d84f6fbf-5226-43d4-b249-dfac3a52db43}
+  \begin{field}
+    Def. $!R$
+  \end{field} \\
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
+  \begin{field}
+    \[ 
+      \prftree[r]
+      {!R}
+      {\Gamma; \cdot\vdash A\text{ eph}}
+      {\Gamma; \cdot\vdash !A\text{ eph}}
+    \] 
+  \end{field}
+\end{note}
+
+% TODO - neutral elements with their coresponding connnectives
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
