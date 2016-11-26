@@ -12,4 +12,26 @@ This document serves the generation of flashcarts to remember and study
     * from here on you can import `doc.tex` into the linear logic dec
 4. Sync & enjoy
 
+### VIM
+I use the following snippet in ultisnips to generate a card boilerplate:
 
+```
+global !p
+from uuid import uuid4
+def uuid():
+	return str(uuid4())
+endglobal
+
+snippet note "Anki note" b
+\begin{note}
+  \xplain{`!p if not snip.c: snip.rv = uuid()`}
+  \begin{field}
+		${1}
+  \end{field}
+  \begin{field}
+		${2}
+  \end{field}
+\end{note}
+
+endsnippet
+```
